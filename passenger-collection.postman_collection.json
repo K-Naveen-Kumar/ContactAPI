@@ -1,0 +1,391 @@
+{
+	"info": {
+		"_postman_id": "c27845d2-7a10-481e-a3eb-fe82882d6b4d",
+		"name": "passenger-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25449544"
+	},
+	"item": [
+		{
+			"name": "404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/contact?Email=ysd@raml.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"contact"
+					],
+					"query": [
+						{
+							"key": "Email",
+							"value": "ysd@raml.com"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "404",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/contact?Email=ysd@raml.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"contact"
+							],
+							"query": [
+								{
+									"key": "Email",
+									"value": "ysd@raml.com"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 19:30:55 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"User Data Not Found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "200",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/contact?Email=msd@raml.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"contact"
+					],
+					"query": [
+						{
+							"key": "Email",
+							"value": "msd@raml.com"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/contact?Email=msd@raml.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"contact"
+							],
+							"query": [
+								{
+									"key": "Email",
+									"value": "msd@raml.com"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "148"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 May 2023 19:34:19 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Email\": \"msd@raml.com\",\n        \"FirstName\": \"mahendra\",\n        \"Id\": \"0035i00000V3cJNAAZ\",\n        \"LastName\": \"Dhoni\",\n        \"type\": \"Contact\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "200-success",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n        \"email\": \"suresh@rmail.com\",\r\n        \"FirstName\": \"suresh\",\r\n        \"LastName\": \"raina\"\r\n    }]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"contact"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200-success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n        \"email\": \"suresh@rmail.com\",\r\n        \"FirstName\": \"suresh\",\r\n        \"LastName\": \"raina\"\r\n    }]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"contact"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 13 May 2023 10:28:34 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": \"true\",\n    \"id\": [\n        \"0035i00000V4JatAAF\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "500-server error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"email\": \"suresh@rmail.com\",\r\n        \"FirstName\": \"suresh\",\r\n        \"LastName\": \"raina\"\r\n    }\r\n    ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"contact"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "500-server error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"email\": \"suresh@rmail.com\",\r\n        \"FirstName\": \"suresh\",\r\n        \"LastName\": \"raina\"\r\n    }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"contact"
+							]
+						}
+					},
+					"status": "Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 13 May 2023 11:16:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"Message\": \"Invalid username, password, security token; or user locked out.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "400-bad request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"email\": \"suresh@rmail.com\",\r\n        \"FirstName\": \"suresh\",\r\n        \"LastName\": \r\n    }\r\n    ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"contact"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "400-bad request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"email\": \"suresh@rmail.com\",\r\n        \"FirstName\": \"suresh\",\r\n        \"LastName\": \r\n    }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"contact"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "125"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 13 May 2023 11:19:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": \"false\",\n    \"message\": \"Bad request\",\n    \"error\": \"Unsupported chars in string value (probably a binary file)\"\n}"
+				}
+			]
+		}
+	]
+}
